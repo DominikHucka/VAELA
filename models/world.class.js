@@ -2,7 +2,7 @@ class World {
   canvas;
   ctx;
   mage = new Mage();
-  keyboard = new Keyboard();
+  keyboard;
 
   constructor(canvas, keyboard) {
     this.ctx = canvas.getContext("2d");
@@ -13,7 +13,7 @@ class World {
   }
 
   setWorld() {
-    this.mage.world = this.world;
+    this.mage.world = this;
   }
 
   drawWorld() {

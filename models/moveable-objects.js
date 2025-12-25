@@ -11,14 +11,10 @@ class MoveableObjects extends Drawable {
   }
 
   moveLeft() {
-    if (Keyboard.LEFT) {
       this.x -= this.speed;
-    }
-    t;
   }
 
   moveRight() {
     this.x += this.speed;
-    console.log("move right");
   }
 }
