@@ -4,8 +4,10 @@ class Drawable {
   img;
   currentImage = 0;
   ctx;
+  speed = 0;
 
-  constructor() {}
+  constructor() {
+  }
 
   loadImage(path) {
     this.img = new Image();
