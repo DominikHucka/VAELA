@@ -3,6 +3,7 @@ class Mage extends MoveableObjects {
   y = 320;
   height = 150;
   width = 150;
+  world;
 
     MAGE_WALKING = [
     "src/img/19-Heros-Main/PNG/Mage/Walk/walk1.png",
@@ -17,10 +18,19 @@ class Mage extends MoveableObjects {
     super();
     this.loadImage(this.MAGE_WALKING[0]);
     this.loadImages(this.MAGE_WALKING);
-    
-    
+    this.playAnimation();
+  } 
+
+  playAnimation() {
     setInterval(() => {
+      this.walkCharacter();
       this.animation(this.MAGE_WALKING);
-    }, (1000 / 60));
+    }, 100);
+  }
+
+  walkCharacter() {
+    if (this.moveLeft || this.moveRight) {
+      this.animation(this.MAGE_WALKING);
+    }
   }
 }

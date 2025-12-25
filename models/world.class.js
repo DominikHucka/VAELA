@@ -2,11 +2,18 @@ class World {
   canvas;
   ctx;
   mage = new Mage();
+  keyboard = new Keyboard();
 
-  constructor(canvas) {
+  constructor(canvas, keyboard) {
     this.ctx = canvas.getContext("2d");
     this.canvas = canvas;
+    this.keyboard = keyboard;
     this.drawWorld();
+    this.setWorld()
+  }
+
+  setWorld() {
+    this.mage.world = this.world;
   }
 
   drawWorld() {

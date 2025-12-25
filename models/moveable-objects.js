@@ -1,4 +1,5 @@
 class MoveableObjects extends Drawable {
+  speed = 5;
   constructor() {
     super();
   }
@@ -6,14 +7,18 @@ class MoveableObjects extends Drawable {
   animation(obj) {
     let i = this.currentImage % obj.length;
     this.img = this.imageChache[obj[i]];
-    this.currentImage++;        
+    this.currentImage++;
   }
 
-  moveLef() {
-    console.log("move left");   
+  moveLeft() {
+    if (Keyboard.LEFT) {
+      this.x -= this.speed;
+    }
+    t;
   }
 
   moveRight() {
+    this.x += this.speed;
     console.log("move right");
   }
 }
