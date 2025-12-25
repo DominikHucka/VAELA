@@ -8,7 +8,9 @@ class Mage extends MoveableObjects {
     "src/img/pixel-art-fantasy-game-main-heroes/PNG/Mage/Walk/walk1.png",
     "src/img/pixel-art-fantasy-game-main-heroes/PNG/Mage/Walk/walk2.png",
     "src/img/pixel-art-fantasy-game-main-heroes/PNG/Mage/Walk/walk3.png",
-    "src/img/pixel-art-fantasy-game-main-heroes/PNG/Mage/Walk/walk4.png"
+    "src/img/pixel-art-fantasy-game-main-heroes/PNG/Mage/Walk/walk4.png",
+    "src/img/pixel-art-fantasy-game-main-heroes/PNG/Mage/Walk/walk5.png",
+    "src/img/pixel-art-fantasy-game-main-heroes/PNG/Mage/Walk/walk6.png"
   ]
 
   constructor() {

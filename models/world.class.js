@@ -11,25 +11,24 @@ class World {
 
   drawWorld() {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    this.drawMoveableObjects(this.mage);
-    this.drawToMap();
+    this.addToMap(this.mage);
     let self = this;
     requestAnimationFrame(function () {
       self.drawWorld();
     });
   }
 
-  drawMoveableObjects(obj) {
-    obj.forEach((o) => {
-      this.addToMap(o);
-    });
-  }
+  //drawMoveableObjects(obj) {
+    //obj.forEach((o) => {
+      //this.addToMap(o);
+    //});
+  //}
 
   addToMap(mo) {
     mo.draw(this.ctx);
   }
 
-  drawToMap(backgroundImage) {
+  drawToLevel(backgroundImage) {
     this.ctx.drawImage(backgroundImage);
   }
 }
