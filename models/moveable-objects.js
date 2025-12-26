@@ -11,7 +11,7 @@ class MoveableObjects extends Drawable {
   }
 
   moveLeft() {
-      this.x -= this.speed;
+    this.x -= this.speed;
   }
 
   moveRight() {

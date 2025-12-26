@@ -25,17 +25,17 @@ class World {
     });
   }
 
-  //drawMoveableObjects(obj) {
-    //obj.forEach((o) => {
-      //this.addToMap(o);
-    //});
-  //}
+  drawMoveableObjects(obj) {
+    obj.forEach((o) => {
+      this.addObject(o);
+    });
+  }
 
   addToMap(mo) {
     mo.draw(this.ctx);
   }
 
-  drawToLevel(backgroundImage) {
+  addObject(backgroundImage) {
     this.ctx.drawImage(backgroundImage);
   }
 }

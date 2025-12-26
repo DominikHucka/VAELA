@@ -4,9 +4,13 @@ class Drawable {
   img;
   currentImage = 0;
   ctx;
-  speed = 0;
 
   constructor() {
+   
+  }
+
+  draw(ctx) {
+    ctx.drawImage(this.img, this.x, this.y, this.height, this.width);
   }
 
   loadImage(path) {
@@ -22,7 +26,4 @@ class Drawable {
     });
   }
 
-  draw(ctx) {
-    ctx.drawImage(this.img, this.x, this.y, this.height, this.width);
-  }
 }

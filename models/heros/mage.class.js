@@ -18,17 +18,17 @@ class Mage extends MoveableObjects {
     super();
     this.loadImage(this.MAGE_WALKING[0]);
     this.loadImages(this.MAGE_WALKING);
-    // this.playAnimation();
-    // this.walkCharacter();
-  } 
+    setInterval(() => {
+      this.playAnimation();
+    }, 100);
+  }
 
-  // playAnimation() {
-  //   setInterval(() => {
-  //     if (this.world.keyboard.LEFT || this.world.keyboard.RIGHT) {
-  //       this.animation(this.MAGE_WALKING);
-  //     }
-  //   }, 100);
-  // }
+  playAnimation() {
+    if (this.world.keyboard.RIGHT || this.world.keyboard.LEFT) {
+      this.animation(this.MAGE_WALKING);
+    }
+    
+  }
 
   // walkCharacter() {
   //   if (this.world.keyboard.RIGHT) {
