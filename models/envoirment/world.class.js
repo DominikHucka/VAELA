@@ -41,7 +41,6 @@ class World {
     }
   }
 
-  
   flipImage(mo) {
     this.ctx.save(); // Aktuellen Zustand speichern
     this.ctx.translate(mo.width, 0); // Den Mal-Stift um die Breite des Bildes verschieben

@@ -5,15 +5,9 @@ class Mage extends MoveableObjects {
   height = 150;
   width = 150;
   world;
+  heroTypeImages = new loadImagesHeros();
 
-  MAGE_WALKING = [
-    "src/img/19-Heros-Main/PNG/Mage/Walk/walk1.png",
-    "src/img/19-Heros-Main/PNG/Mage/Walk/walk2.png",
-    "src/img/19-Heros-Main/PNG/Mage/Walk/walk3.png",
-    "src/img/19-Heros-Main/PNG/Mage/Walk/walk4.png",
-    "src/img/19-Heros-Main/PNG/Mage/Walk/walk5.png",
-    "src/img/19-Heros-Main/PNG/Mage/Walk/walk6.png",
-  ];
+  MAGE_WALKING = this.heroTypeImages.Heros.MAGE_WALKING;
 
   constructor() {
     super();
