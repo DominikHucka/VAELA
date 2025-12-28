@@ -1,9 +1,13 @@
 class World {
   canvas;
   ctx;
+  level1Images = new Level1Images();
   mage = new Mage();
   heros = new Heros();
   keyboard;
+  img;
+  ctx;
+  
 
   constructor(canvas, keyboard) {
     this.ctx = canvas.getContext("2d");
@@ -20,6 +24,7 @@ class World {
 
   drawWorld() {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.drawMoveableObjects(this.level1Images.LVL1_BACKGROUND);
     this.addToMap(this.mage);
     let self = this;
     requestAnimationFrame(function () {
@@ -56,7 +61,7 @@ class World {
     this.ctx.restore(); // Den gespeicherten Zustand laden
   }
 
-  addObject(backgroundImage) {
-    this.ctx.drawImage(backgroundImage);
+  addObject(mo) {
+    mo.draw(this.ctx);
   }
 }
