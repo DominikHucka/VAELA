@@ -2,6 +2,7 @@ class World {
   canvas;
   ctx;
   mage = new Mage();
+  heros = new Heros();
   keyboard;
 
   constructor(canvas, keyboard) {
@@ -13,6 +14,7 @@ class World {
   }
 
   setWorld() {
+    this.heros.world = this;
     this.mage.world = this;
   }
 
