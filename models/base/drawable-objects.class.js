@@ -1,4 +1,4 @@
-class Drawable {
+class DrawableObejects {
   character = new Image();
   imageChache = {};
   img;

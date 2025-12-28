@@ -41,6 +41,20 @@ class World {
     }
   }
 
+  
+  flipImage(mo) {
+    this.ctx.save(); // Aktuellen Zustand speichern
+    this.ctx.translate(mo.width, 0); // Den Mal-Stift um die Breite des Bildes verschieben
+    this.ctx.scale(-1, 1); // Die X-Achse spiegeln
+    mo.x = mo.x * -1;
+  }
+
+  // Diese Funktion macht alles wieder rückgängig
+  flipImageBack(mo) {
+    mo.x = mo.x * -1; // X-Koordinate wieder normalisieren
+    this.ctx.restore(); // Den gespeicherten Zustand laden
+  }
+
   addObject(backgroundImage) {
     this.ctx.drawImage(backgroundImage);
   }
