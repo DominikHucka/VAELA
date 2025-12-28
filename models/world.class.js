@@ -8,8 +8,8 @@ class World {
     this.ctx = canvas.getContext("2d");
     this.canvas = canvas;
     this.keyboard = keyboard;
+    this.setWorld();
     this.drawWorld();
-    this.setWorld()
   }
 
   setWorld() {
@@ -32,7 +32,13 @@ class World {
   }
 
   addToMap(mo) {
+    if (mo.otherDirection) {
+      this.flipImage(mo);
+    }
     mo.draw(this.ctx);
+    if (mo.otherDirection) {
+      this.flipImageBack(mo);
+    }
   }
 
   addObject(backgroundImage) {
